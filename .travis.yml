@@ -1,0 +1,11 @@
+arch: ppc64le
+os: linux
+dist: focal
+service: docker
+
+before_script:
+  - cat /etc/docker/daemon.json
+
+script:
+  - ping -4 -c4 google.com
+  - ping -6 -c4 google.com
